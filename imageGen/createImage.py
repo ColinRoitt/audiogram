@@ -1,10 +1,13 @@
 from PIL import Image, ImageDraw, ImageFont
 import shutil
 
-headline = 'Breakfast: Colin and Matt Having a Chat'
-bottomline = '9pm Tuesdays'
+headline = 'The Pop Shop'
+bottomline = '3pm Tuesdays'
 social = 'ury.org.uk | @ury1350'
 brand = '#002d5a'
+topText = 350
+bottomText = 800
+btmPadding = 70
 
 W, H = (1000, 1000)
 img = Image.new('RGB', (W, H), color=brand)
@@ -21,15 +24,15 @@ while w > 900:
         '../settings/fonts/Roboto-Regular.ttf', fontsize))
 roboto = ImageFont.truetype(
     '../settings/fonts/Roboto-Regular.ttf', fontsize)
-pos = (((W-w)/2, 350))
+pos = (((W-w)/2, topText))
 d.text(pos, headline, fill=(255, 255, 255), font=roboto)
 
 w, h = d.textsize(bottomline, raleway)
-pos = (((W-w)/2, 700))
+pos = (((W-w)/2, bottomText))
 d.text(pos, bottomline, fill=(255, 255, 255), font=raleway)
 
 w, h = d.textsize(social, raleway)
-pos = (((W-w)/2, 800))
+pos = (((W-w)/2, bottomText + btmPadding))
 d.text(pos, social, fill=(255, 255, 255), font=raleway)
 
 
