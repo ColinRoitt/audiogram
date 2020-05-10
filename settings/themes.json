@@ -113,7 +113,7 @@
     "captionLeft": 200,
     "captionRight": 800,
     "captionTop": 400,
-    "backgroundImage": "ury.png"
+    "backgroundImage": "image.png"
   },
   "URY-PrimeTime": {
     "width": 1000,
@@ -171,6 +171,6 @@
     "waveBottom": 780,
     "waveColor": "#fff",
     "captionFont": "52px 'Roboto'",
-    "backgroundImage": "image.png"
+    "backgroundImage": "withImage.png"
   }
 }
